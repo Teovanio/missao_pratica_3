@@ -3,7 +3,7 @@ import { Livro } from "../modelo/Livros";
 export class ControleLivro {
   livros: Livro[] = [
     {
-      título: "As Crônicas de gelo e Fogo",
+      titulo: "As Crônicas de gelo e Fogo",
       resumo:
         "Há três argumentos principais na história, que se tornam cada vez mais interligados: a crônica de uma guerra civil dinástica entre várias famílias concorrentes pelo controle dos Sete Reinos; a ameaça crescente das criaturas sobrenaturais conhecidas como os Outros, que habitam além de uma imensa muralha de gelo ao Norte; e a ambição de Daenerys Targaryen, a filha exilada de um rei assassinado em uma outra guerra civil treze anos antes, prestes a voltar à sua terra e reivindicar seu trono de direito.",
       autores: ["George R.R. Martin"],
@@ -11,7 +11,7 @@ export class ControleLivro {
       codigo: 1,
     },
     {
-      título: "o guia do mochileiro das galáxias",
+      titulo: "o guia do mochileiro das galáxias",
       resumo:
         "Arthur Dent, um típico inglês que, num dia que pode ser considerado tudo menos típico, descobre não só que Ford Prefect, um de seus melhores e únicos amigos, é um extra-terrestre, mas também que a Terra está prestes a ser destruída pelos Vogons (uma raça alienígena extremamente burocrática e malquista em toda a Galáxia) para dar espaço a uma nova via intergaláctica.Com a ajuda de Ford, Arthur foge momentos antes da demolição do planeta, pegando carona clandestinamente em uma das espaçonaves Vogons.",
       autores: ["Douglas Adams"],
@@ -19,7 +19,7 @@ export class ControleLivro {
       codigo: 2,
     },
     {
-      título: "Star Wars",
+      titulo: "Star Wars",
       resumo:
         "A princesa Leia é mantida refém pelas forças imperiais comandadas por Darth Vader. Luke Skywalker e o capitão Han Solo precisam libertá-la e restaurar a liberdade e a justiça na galáxia.",
       autores: ["George Lucas"],
@@ -43,8 +43,11 @@ export class ControleLivro {
   };
   excluir = (codigo: number) => {
     const index = this.obterLivros().findIndex((item) => {
-      return (item.codigo = codigo);
+      return (item.codigo == codigo);
     });
-    this.livros.splice(index, 1);
+    if(index != -1) {
+      this.livros.splice(index, 1); 
+    }
+  
   };
 }

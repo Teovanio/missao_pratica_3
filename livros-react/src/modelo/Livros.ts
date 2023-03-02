@@ -1,7 +1,7 @@
 export class Livro {
   codigo: number;
   codEditora: number;
-  título: string;
+  titulo: string;
   resumo: string;
   autores: string[];
 }

@@ -20,8 +20,15 @@ export class ControleEditora {
     return this.editoras;
   };
   getNomeEditora = (codEditora: number) => {
-    return this.getEditoras().filter((obj) => {
-      return (obj.codEditora = codEditora);
+    const retorno =  this.getEditoras().filter((obj) => {
+      return (obj.codEditora == codEditora);
     });
+ 
+
+    if(retorno.length > 0) {
+      return retorno[0].nome
+    } else {
+      return 'Não encontrado';
+    }
   };
 }
