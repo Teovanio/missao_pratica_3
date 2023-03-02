@@ -1,8 +1,9 @@
 import { ControleEditora } from "./controle/ControleEditora";
 import { ControleLivros } from "./controle/ControleLivros";
 import { useState, useEffect } from 'react';
+import Table from 'react-bootstrap/Table';
 
-
+ 
 function LivroLista() {
   const controleLivros = new ControleLivros();
   const controleEditora = new ControleEditora();
@@ -10,66 +11,80 @@ function LivroLista() {
   const [carregado, setCarregado] = useState(false);
   const [livros, setLivros] = useState([]);
 
-  useEffect(() => {
-     setLivros(controleLivros.obterLivros());
+  useEffect(  ()  => { 
+    const livros = controleLivros.obterLivros()
 
-     setCarregado(true); 
+     setLivros(livros);
+
+    setCarregado(true); 
   }, [carregado]);
 
   const excluir = (codLivro) => {
- 
-    console.log("codLivro: ", codLivro)
      controleLivros.excluir(codLivro);
     setCarregado(false)
   }
+  
 
   return <main>
     <h1>
       Catálogo de Livros
     </h1>
-    <table className="table" striped bordered hover size="sm">
-      <thead className="thead-dark">
-          <th>titulo</th>
-          <th>resumo</th>
-          <th>editora</th>
+    <Table striped bordered hover      >
+      <thead   className="table-dark" >
+        <tr  >
+          <th >titulo</th>
+          <th >resumo</th>
+          <th >editora</th>
           <th>autores</th>
+        </tr>  
       </thead>
       <tbody>
       {carregado ? 
       livros.map((l) => 
-      <LinhaLivro livro={l} excluir={excluir} ></LinhaLivro>
+      <LinhaLivro livro={l} excluir={() =>  {excluir(l.codigo)}} key={l.codigo}></LinhaLivro>
       )
         : <tr>
       <th scope="row"></th>
-      <td>Ainda estamos carregando</td>
+      <td >Ainda estamos carregando</td>
       <td> </td>
       <td></td>
     </tr> }   
+
+    {carregado && livros.length === 0 && (<tr>
+      <td></td>
+      <td>Não existem mais livros</td>
+      <td></td>
+      <td></td>
+    </tr>)}
     
       
-  </tbody>
-    </table>
+      </tbody>
+    </Table>
   </main>
 }
 
-function LinhaLivro(props) {
-  console.log(props)
+function LinhaLivro(props) { 
   const controleEditora = new ControleEditora();
 
   const nomeEditora =  controleEditora.getNomeEditora(props.livro.codEditora);
 
-  return <tr>
+  return <tr >
     <td>
       {props.livro.titulo}
       <br/>
-      <button onClick={() => {
-        console.log(props)
-        props.excluir(props.livro.codigo)
+      <button onClick={() => { 
+        props.excluir()
         }} >Excluir</button>
     </td>
     <td>{props.livro.resumo}</td>
     <td>{nomeEditora}</td>
-    {/* <td>{props.livro.autores}</td> */}
+    <td>
+      <ul>
+        {props.livro.autores.map((autor, i) => {
+          return (<li key={i}>{autor}</li>)
+        })}
+      </ul>
+    </td>
   </tr>
 }
 export default LivroLista

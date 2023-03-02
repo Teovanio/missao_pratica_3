@@ -16,20 +16,18 @@ let editoras: Editora[] = [
 ];
 
 export class ControleEditora {
-
   getEditoras = (): Editora[] => {
     return editoras;
   };
   getNomeEditora = (codEditora: number) => {
-    const retorno =  this.getEditoras().filter((obj) => {
-      return (obj.codEditora == codEditora);
+    const retorno = this.getEditoras().filter((obj) => {
+      return obj.codEditora === codEditora;
     });
- 
 
-    if(retorno.length > 0) {
-      return retorno[0].nome
+    if (retorno.length > 0) {
+      return retorno[0].nome;
     } else {
-      return 'Não encontrado';
+      return "Não encontrado";
     }
   };
 }
