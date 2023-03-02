@@ -1,23 +1,24 @@
 import { Editora } from "../modelo/Editora";
 
+let editoras: Editora[] = [
+  {
+    codEditora: 32454,
+    nome: "Leya",
+  },
+  {
+    codEditora: 45678,
+    nome: "Arqueiro",
+  },
+  {
+    codEditora: 98764,
+    nome: "DarkSide",
+  },
+];
+
 export class ControleEditora {
-  editoras: Editora[] = [
-    {
-      codEditora: 32454,
-      nome: "Leya",
-    },
-    {
-      codEditora: 45678,
-      nome: "Arqueiro",
-    },
-    {
-      codEditora: 98764,
-      nome: "DarkSide",
-    },
-  ];
 
   getEditoras = (): Editora[] => {
-    return this.editoras;
+    return editoras;
   };
   getNomeEditora = (codEditora: number) => {
     const retorno =  this.getEditoras().filter((obj) => {

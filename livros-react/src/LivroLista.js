@@ -1,10 +1,10 @@
 import { ControleEditora } from "./controle/ControleEditora";
-import { ControleLivro } from "./controle/ControleLivros";
-import React, { useState, useEffect } from 'react';
+import { ControleLivros } from "./controle/ControleLivros";
+import { useState, useEffect } from 'react';
 
 
 function LivroLista() {
-  const controleLivro = new ControleLivro();
+  const controleLivros = new ControleLivros();
   const controleEditora = new ControleEditora();
 
   const [carregado, setCarregado] = useState(false);
@@ -12,7 +12,7 @@ function LivroLista() {
   const [livros, setLivros] = useState([]);
 
   useEffect(() => {
-     setLivros(controleLivro.obterLivros());
+     setLivros(controleLivros.obterLivros());
 
      setCarregado(true); 
   }, [carregado]);
@@ -20,7 +20,7 @@ function LivroLista() {
   const excluir = (codLivro) => {
  
     console.log("codLivro: ", codLivro)
-     controleLivro.excluir(codLivro);
+     controleLivros.excluir(codLivro);
     setCarregado(false)
   }
 
@@ -28,7 +28,7 @@ function LivroLista() {
     <h1>
       Catálogo de Livros
     </h1>
-    <table className="table">
+    <table className="table" striped bordered hover size="sm">
       <thead className="thead-dark">
           <th>titulo</th>
           <th>resumo</th>

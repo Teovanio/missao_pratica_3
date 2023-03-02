@@ -1,6 +1,6 @@
 import { Livro } from "../modelo/Livros";
 
-export class ControleLivro {
+export class ControleLivros {
   livros: Livro[] = [
     {
       titulo: "As Crônicas de gelo e Fogo",
