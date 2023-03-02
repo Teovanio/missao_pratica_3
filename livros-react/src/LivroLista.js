@@ -8,7 +8,6 @@ function LivroLista() {
   const controleEditora = new ControleEditora();
 
   const [carregado, setCarregado] = useState(false);
-
   const [livros, setLivros] = useState([]);
 
   useEffect(() => {
