@@ -104,11 +104,11 @@ JSON, e opcionalmente testar os demais métodos (POST e DELETE) via Postman,
 Boomerang, ou outra ferramenta para envio de requisições ✓
 Habilite o Bootstrap no aplicativo Next JS:
     a) Parar o aplicativo livros-next, caso esteja em execução, e executar o comando
-npm install bootstrap
+npm install bootstrap ✓
 
     b) Alterar o conteúdo de _app.tsx para o que é apresentado a seguir, com a
 importação da folha de estilo do Bootstrap, deixando-a disponível para todos os
-componentes
+componentes ✓
 
 Implemente o componente LinhaLivro, no arquivo LinhaLivro.tsx:
     a) Iniciar com a definição de uma instância de ControleEditora, com o nome
