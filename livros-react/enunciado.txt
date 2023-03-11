@@ -153,55 +153,55 @@ funcionalidade da exclusão de livro.
 👉 2º Procedimento | Página de Cadastro e Navegação no React JS
 
 Ajuste as rotas de navegação do sistema livros-react:
-    a) Adicionar o pacote de navegação com npm instal react-router-dom
+    a) Adicionar o pacote de navegação com npm instal react-router-dom ✓
 
     b) Definir o componente LivroDados, em LivroDados.js, inicialmente com o retorno
-de uma tag main e uma mensagem de "Olá mundo", devendo ser exportado por padrão
+de uma tag main e uma mensagem de "Olá mundo", devendo ser exportado por padrão ✓
 
-    c) Alterar o arquivo App.tsx, com a adição das rotas e menu de navegação
+    c) Alterar o arquivo App.tsx, com a adição das rotas e menu de navegação ✓
 
     d) No retorno do componente deve ser fornecido um BrowserRouter, onde as rotas,
 na divisão Routes, serão a raiz, apontando para LivroLista, e dados, apontando para
-LivroDados
+LivroDados ✓
 
     e) Precedendo a divisão Routes, definir o menu de navegação, com tag nav,
 formatado pelo BootStrap, e utilizar elementos do tipo Link, no lugar das âncoras, para
-acesso às rotas definidas
+acesso às rotas definidas ✓
 
 Ajuste as características para obter uma página como o exemplo abaixo:
 XXX.png
  (Moderado)
 Implemente o componente LivroDados, no arquivo LivroDados.js:
     a) Instanciar um controlador de livros, com o nome controleLivro, e um de editoras,
-com o nome controleEditora
+com o nome controleEditora ✓
 
     b) Em LivroDados, definir o vetor opcoes, invocando o método getEditoras, com o
-mapeamento de codEditora para value e nome para text
+mapeamento de codEditora para value e nome para text ✓
 
     c) Definir as propriedades titulo, resumo e autores, todas de texto, através de
-useState, além de codEditora, iniciada com a posição zero de opcoes
+useState, além de codEditora, iniciada com a posição zero de opcoes ✓
 
-    d) Acrescentar o atributo navigate, recebendo o Hook useNavigate
+    d) Acrescentar o atributo navigate, recebendo o Hook useNavigate ✓
 
     e) Definir o método tratarCombo, tendo o evento como parâmetro, onde deve
 ocorrer a chamada para setCodEditora, com a passagem do value de uma combo de
-seleção (target do evento) convertido para number
+seleção (target do evento) convertido para number ✓
 
     f) Definir o método incluir, com a recepção de um evento, que primeiro deve eliminar
 o comportamento padrão com preventDefault, em seguida instanciar um livro com
 código valendo zero, o valor das propriedades de estado, e autores separados por linha
 (split), invocar o método incluir do controlador de livros, e navegar para a página de
-listagem, na raiz
+listagem, na raiz ✓
 
     g) No retorno do componente deve ser fornecida a área principal (main), contendo o
 título da página e um formulário para inclusão do livro, sendo composto dos campos
-referentes às propriedades de estado, com ligação através de value e onChange
+referentes às propriedades de estado, com ligação através de value e onChange ✓
 
     h) Utilizar uma lista de seleção (combo) para as editoras, com as opções geradas
-pelo método map, de opcoes, e associando onChange ao método tratarCombo
+pelo método map, de opcoes, e associando onChange ao método tratarCombo ✓
 
     i) Relacionar o evento onSubmit, do formulário, ao método incluir, além de adicionar
-um botão de submissão ao final
+um botão de submissão ao final ✓
 
 Ajuste as características para obter uma página como o exemplo abaixo:
 Captura de tela 2022-10-17 170909.png
@@ -212,7 +212,7 @@ funcionalidade de inclusão de livros.
 
 Crie o aplicativo e configure o ambiente:
     a) Executar o comando npx create-next-app livros-next  --typescript
-
+a
     b) Entrar no diretório do projeto criado, executando cd livros-next
 
     c) Abrir o Visual Studio Code, executando code .\
