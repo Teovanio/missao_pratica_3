@@ -9,11 +9,32 @@ interface LinhaLivroProps {
 }
 
 const LinhaLivro: React.FC<LinhaLivroProps> = (props) => {
+  const controleEditora = new ControleEditora();
+
+  const nomeEditora = controleEditora.getNomeEditora(props.livro.codEditora);
+
   return (
-    <div>
-      <p style={{ fontWeight: props.priority ? "bold" : "normal" }}>
-        {props.name}
-      </p>
-    </div>
+    <tr>
+      <td>
+        {props.livro.titulo}
+        <br />
+        <button
+          onClick={() => {
+            props.excluir();
+          }}
+        >
+          Excluir
+        </button>
+      </td>
+      <td>{props.livro.resumo}</td>
+      <td>{nomeEditora}</td>
+      <td>
+        <ul>
+          {props.livro.autores.map((autor, i) => {
+            return <li key={i}>{autor}</li>;
+          })}
+        </ul>
+      </td>
+    </tr>
   );
 };
