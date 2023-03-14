@@ -8,7 +8,7 @@ interface LinhaLivroProps {
   excluir(): void;
 }
 
-const LinhaLivro: React.FC<LinhaLivroProps> = (props) => {
+export const LinhaLivro: React.FC<LinhaLivroProps> = (props) => {
   const controleEditora = new ControleEditora();
 
   const nomeEditora = controleEditora.getNomeEditora(props.livro.codEditora);

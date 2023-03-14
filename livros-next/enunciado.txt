@@ -113,42 +113,42 @@ componentes ✓
 Implemente o componente LinhaLivro, no arquivo LinhaLivro.tsx:
     a) Iniciar com a definição de uma instância de ControleEditora, com o nome
 controleEditora, utilizado internamente para diminuir a quantidade de chamadas
-assíncronas, já que os dados de editoras não são dinâmicos
+assíncronas, já que os dados de editoras não são dinâmicos ✓
 
     b) Definir a interface LinhaLivroProps, com o atributo livro, do tipo Livro, e método
-excluir(), do tipo void
+excluir(), do tipo void ✓
 
     c) Definir o componente exportável LinhaLivro, com parâmetro props, para a
 recepção dos atributos livro e excluir, a partir do seletor, utilizando export const
-LinhaLivro: React.FC<LinhaLivroProps> = (props) => { }
+LinhaLivro: React.FC<LinhaLivroProps> = (props) => { } ✓
 
     d) Copiar o corpo da função LinhaLivro, encontrada no arquivo LivroLista.js, do
 projeto livros-react, para o corpo da nova função, o que se justifica pelo fato de que
-apenas a assinatura é modificada para uso no Next JS
+apenas a assinatura é modificada para uso no Next JS ✓
 
-Crie o arquivo LivroLista.tsx, no diretório pages, com o conteúdo seguinte:
-Crie o arquivo LivroDados.tsx, no diretório pages, com o conteúdo seguinte:
+Crie o arquivo LivroLista.tsx, no diretório pages, com o conteúdo seguinte: ✓
+Crie o arquivo LivroDados.tsx, no diretório pages, com o conteúdo seguinte: ✓
 Implemente o componente Menu.tsx, de acordo com as instruções seguintes:
-    a) Definir o componente com export const Menu: React.FC = () => { }
+    a) Definir o componente com export const Menu: React.FC = () => { } ✓
 
-    b) Retornar o menu de navegação, com tag nav, formatado pelo BootStrap
+    b) Retornar o menu de navegação, com tag nav, formatado pelo BootStrap ✓
 
-    c) Utilizar elementos do tipo Link, da biblioteca next/link
+    c) Utilizar elementos do tipo Link, da biblioteca next/link ✓
 
     d) Através do atributo href, de Link, fornecer acesso para as páginas index,
-LivroLista e LivroDados, como opções do menu de navegação
+LivroLista e LivroDados, como opções do menu de navegação ✓
 
 Altere o componente Home, no arquivo index.tsx:
-    a) No retorno, manter a div inicial, com classe CSS container
+    a) No retorno, manter a div inicial, com classe CSS container ✓
 
-    b) No componente Head, alterar title para "Loja Next"
+    b) No componente Head, alterar title para "Loja Next" ✓
 
-    c) Acrescentar um componente Menu após Head
+    c) Acrescentar um componente Menu após Head ✓
 
     d) Após o menu, definir a área principal (main), com estilo styles.main, e dentro
-dela criar um título h1, com estilo styles.title e texto Página Inicial
+dela criar um título h1, com estilo styles.title e texto Página Inicial ✓
 
-    e) Apagar todo o restante da página original
+    e) Apagar todo o restante da página original ✓
 
 Ajuste as características para obter uma página como o exemplo abaixo:
 Implemente o componente LivroLista, no arquivo LivroLista.tsx:
