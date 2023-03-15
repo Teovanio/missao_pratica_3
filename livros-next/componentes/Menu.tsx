@@ -3,16 +3,24 @@ import Link from "next/link";
 
 export const Menu: React.FC = () => {
   return (
-    <ul className="navbar navbar-dark bg-dark">
-      <li className="nav-item">
-        <Link href="/">Home</Link>
-      </li>
-      <li className="navbar-item">
-        <Link href="/dados">Catalogo</Link>
-      </li>
-      <li className="navbar-item">
-        <Link href="/novo">Novo</Link>
-      </li>
-    </ul>
+    <nav className="navbar navbar-dark bg-dark">
+      <ul className="nav ">
+        <li className="nav-item">
+          <Link className="nav-link custom-navbar" href="/">
+            Home
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link custom-navbar" href="/LivroLista">
+            Catálogo
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link custom-navbar" href="/LivroDados">
+            Novo
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 };
