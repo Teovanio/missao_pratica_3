@@ -152,20 +152,20 @@ dela criar um título h1, com estilo styles.title e texto Página Inicial ✓
 
 Ajuste as características para obter uma página como o exemplo abaixo:
 Implemente o componente LivroLista, no arquivo LivroLista.tsx:
-    a) Importar os estilos com import styles from '../styles/Home.module.css'
+    a) Importar os estilos com import styles from '../styles/Home.module.css' ✓
 
-    b) Definir uma constante com o nome baseURL, do tipo texto, utilizando o valor
+    b) Definir uma constante com o nome baseURL, do tipo texto, utilizando o valor ✓
 "http://localhost:3000/api/livros"
 
-    c) Criar a função obter, assíncrona, no estilo arrow function, com a chamada para
+    c) Criar a função obter, assíncrona, no estilo arrow function, com a chamada para ✓
 baseURL, via fetch, e retorno da resposta no formato JSON
 
-    d) Criar a função excluirLivro, assíncrona, no estilo arrow function, tendo o
+    d) Criar a função excluirLivro, assíncrona, no estilo arrow function, tendo o ✓
 parâmetro codigo, numérico, com a chamada para baseURL/codigo via fetch, no
-modo DELETE, e retorno do campo ok da resposta, indicando sucesso ou falha
+modo DELETE, e retorno do campo ok da resposta, indicando sucesso ou falha ✓
 
-    e) Em LivroLista, definir as propriedades livros, do tipo Array<Livro>, e carregado,
-booleana, através de useState
+    e) Em LivroLista, definir as propriedades livros, do tipo Array<Livro>, e carregado, ✓
+booleana, através de useState ✓
 
     f) Utilizar o Hook useEffect, que deve efetuar a chamada para obterLivros,
 assíncrona, alimentando a propriedade de estado livros no retorno, via operador then,
