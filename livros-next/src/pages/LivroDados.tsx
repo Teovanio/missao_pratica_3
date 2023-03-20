@@ -8,6 +8,7 @@ import styles from "../styles/Home.module.css";
 import Head from "next/head";
 import { Menu } from "../../componentes/Menu";
 import { Button, Form, FormLabel } from "react-bootstrap";
+import { useRouter } from "next/router";
 const LivroDados: NextPage = () => {
   const controleEditora = new ControleEditora();
 
@@ -21,7 +22,7 @@ const LivroDados: NextPage = () => {
   const [resumo, setResumo] = useState("");
   const [autores, setAutores] = useState("");
   const [codEditora, setCodEditora] = useState(opcoes[0].value);
-  //const navigate = useNavigate();
+  const router = useRouter();
 
   const tratarCombo = (evento: React.ChangeEvent<HTMLSelectElement>) => {
     setCodEditora(Number(evento.target.value));
@@ -35,8 +36,9 @@ const LivroDados: NextPage = () => {
     livro.titulo = titulo;
     livro.resumo = resumo;
     livro.autores = autores.split("\n");
+
     incluirLivro(livro);
-    // navigate("/");  mudar depois
+    router.push("/LivroLista");
   };
 
   const incluirLivro = (livro: Livro) => {

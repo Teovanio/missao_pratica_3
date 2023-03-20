@@ -235,10 +235,10 @@ formulário para inclusão do livro  ✓
 propriedades de estado, com ligação através de value e onChange ✓
 
     l) Utilizar uma lista de seleção (combo) para as editoras, com as opções geradas
-pelo método map, de opcoes, e associando onChange ao método tratarCombo
+pelo método map, de opcoes, e associando onChange ao método tratarCombo ✓
 
     m) Relacionar o evento onSubmit, do formulário, ao método incluir, além de
-adicionar um botão de submissão ao final
+adicionar um botão de submissão ao final ✓
 
 A execução do projeto deverá fornecer as mesmas funcionalidades de livro-react,
 bem como aparência muito similar, mas agora com o gerenciamento da base de livros
