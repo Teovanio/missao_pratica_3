@@ -169,47 +169,54 @@ booleana, através de useState ✓
 
     f) Utilizar o Hook useEffect, que deve efetuar a chamada para obterLivros,
 assíncrona, alimentando a propriedade de estado livros no retorno, via operador then,
-e alterar carregado para true, tendo ainda como balizador o atributo carregado
+e alterar carregado para true, tendo ainda como balizador o atributo carregado ✓
 
-    g) Acrescentar o método excluir, estilo arrow function, que deve receber o código do
+    g) Acrescentar o método excluir, estilo arrow function, 
+    que deve receber o código do
 livro, invocar a função excluir, assíncrona, e no retorno setar o valor de carregado
-como false, para forçar o redesenho da página
+como false, para forçar o redesenho da página ✓
 
     h) No retorno do componente deve ser fornecida uma div, formatada com
 styles.container, e dentro dela um componente Head, equivalente ao que foi utilizado
-na página Home, um componente Menu, e a área main, contendo o título da página e
-uma tabela para exibição dos livros
+na página Home, um componente Menu,
+ e a área main, contendo o título da página e
+uma tabela para exibição dos livros ✓
 
-    i) Utilizar o método map, de livros, para a geração das linhas de dados como
-componentes do tipo LinhaLivro, tendo como parâmetros o livro atual do vetor, excluir
-invocando o método excluir de LivroLista, com a passagem do código do livro corrente,
-e key associado ao código do livro
+    i) Utilizar o método map, de livros, 
+    para a geração das linhas de dados como
+componentes do tipo LinhaLivro, tendo como parâmetros o livro ✓
+ atual do vetor, excluir 
+invocando o método excluir de Livro ✓
+
+Lista, 
+com a passagem do código do livro corrente,
+e key associado ao código do livro ✓
 
 Implemente o componente LivroDados, no arquivo LivroDados.tsx
-    a) Importar os estilos com import styles from '../styles/Home.module.css'
+    a) Importar os estilos com import styles from '../styles/Home.module.css' ✓
 
-    b) Definir um objeto do tipo ControleEditora, com o nome controleEditora
+    b) Definir um objeto do tipo ControleEditora, com o nome controleEditora ✓
 
-    c) Definir uma constante com o nome baseURL, do tipo texto, utilizando o valor
-"http://localhost:3000/api/livros"
+    c) Definir uma constante com o nome baseURL, do tipo texto, utilizando o valor ✓
+"http://localhost:3000/api/livros" 
 
     d) Criar a função incluirLivro, assíncrona, no estilo arrow function, tendo o
 parâmetro livro, do tipo Livro, com a chamada para baseURL via fetch, no modo
 POST, incluindo o tipo de conteúdo como informação do header e o livro no body,
 convertido com JSON.stringfy. O retorno da função será o campo ok da resposta,
-indicando sucesso ou falha
+indicando sucesso ou falha  ✓
 
     e) Em LivroDados, definir o vetor opcoes, invocando o método getEditoras, com o
-mapeamento de codEditora para value e nome para text
+mapeamento de codEditora para value e nome para text ✓
 
     f) Definir as propriedades titulo, resumo e autores, todas de texto, através de
-useState, além de codEditora, iniciada com a posição zero de opcoes
+useState, além de codEditora, iniciada com a posição zero de opcoes ✓
 
-    g) Acrescentar o atributo navigate, recebendo o Hook useNavigate
+    g) Acrescentar o atributo navigate, recebendo o Hook useNavigate ✓
 
     h) Definir o método tratarCombo, tendo como parâmetro o evento, do tipo
 React.ChageEvent<HTMLSelectElement>, onde deve ocorrer a chamada para
-setCodEditora, passando value, da lista, convertido para number
+setCodEditora, passando value, da lista, convertido para number  ✓
 
     i) Definir o método incluir, apresentando como parâmetro um evento do tipo
 React.FormEvent<HTMLFormElement>, que primeiro deve eliminar o
@@ -217,15 +224,15 @@ comportamento padrão com preventDefault, em seguida instanciar um livro com
 código valendo zero, o valor das propriedades de estado, e autores separados por linha
 (split), invocar a função incluir, assíncrona, e, no retorno dela, navegar para a página
 LivroLista, através do sistema de navegação do Next JS, com a chamada para
-Router.push
+Router.push  ✓
 
     j) No retorno do componente deve ser fornecida uma div, formatada com
 styles.container, e dentro dela um componente Head, equivalente ao que foi utilizado
 na página Home, um componente Menu, e a área main, contendo o título da página e o
-formulário para inclusão do livro
+formulário para inclusão do livro  ✓
 
     k) Implementar o formulário referente aos campos utilizados para definir as
-propriedades de estado, com ligação através de value e onChange
+propriedades de estado, com ligação através de value e onChange ✓
 
     l) Utilizar uma lista de seleção (combo) para as editoras, com as opções geradas
 pelo método map, de opcoes, e associando onChange ao método tratarCombo
